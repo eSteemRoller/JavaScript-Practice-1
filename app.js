@@ -202,4 +202,73 @@ for (let i = 0; i < dollarsToCents3.length; i++) {
 console.log(dollarsToCents3a);
 
 
-// Objects
+// Objects (a collection of key-value pairs)
+
+// Login example
+let users1 = [
+  {
+    username: `JohnDoe123`,
+    userFirstName: `John`,
+    userLastName: `Doe`,
+    email: `JohnDoe96@frontendsimplified.com`,
+    password: `password123`,
+    subscriptionStatus: `VIP`,
+    discordId: `JohnDoe123#1234`,
+    lessonsCompleted: [0, 1],
+  },
+];
+
+// function login(email, password) {
+//   let user = users.find((user) => user.email === email);
+//   if (user.password === password) {
+//     console.log(`Welcome, ${user.userFirstName}`);
+//   }
+//   else {
+//     console.log(`Incorrect email or password`);
+//   }
+// }
+
+function login(email, password) {
+  for (let i = 0; i < users1.length; i++) {
+    if (users1[i].email === email && users1[i].password === password) {
+      console.log(`Welcome, ${users1[i].userFirstName}!`);
+      return;
+    }
+    else {
+      console.log(`Incorrect email or password`);
+    }
+  }
+}
+
+login(`JohnDoe96@frontendsimplified.com`, `password123`);
+
+
+// let signUpForm1 = [
+//   {
+//     username: ``,
+//     userFirstName: ``,
+//     userLastName: ``,
+//     email: ``,
+//     password: ``,
+//     subscriptionStatus: ``,
+//     discordId: ``,
+//     lessonsCompleted: [],
+//   },
+// ];
+
+// Object exercise 1 (adding a clone of the user John Doe object to the users1 array)
+
+function signUpForm1(user) {
+  users1.push(user);
+};
+
+signUpForm1({
+  username: `JohnDoe123`,
+  email: `JohnDoe96@frontendsimplified.com`,
+  password: 'password123',
+  subscriptionStatus: `VIP`,
+  discordId: `JohnDoe123#1234`,
+  lessonsCompleted: [0, 1],
+});
+
+console.log(users1);
