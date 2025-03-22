@@ -109,13 +109,13 @@
 // Using the final resolved promise data with HTML
 // (Mock API for Exercise 1)
 
-const statusRef = document.querySelector(`.status`);
+// const statusRef = document.querySelector(`.status`);
 
-function getSubscriptionStatus() {
-    return new Promise((resolve, reject) => {
-    resolve(`VIP`);
-    });
-}
+// function getSubscriptionStatus() {
+//     return new Promise((resolve, reject) => {
+//     resolve(`VIP`);
+//     });
+// }
 
 // // 1. Using the `async/await` method
 // async function main() {
@@ -130,6 +130,15 @@ function getSubscriptionStatus() {
 // main();
 
 // Promise (Exercise 1)
+
+const statusRef = document.querySelector(`.status`);
+
+function getSubscriptionStatus() {
+    return new Promise((resolve, reject) => {
+    resolve(`VIP`);
+    });
+}
+
 
 function getVideo(subscriptionStatus) {
     return new Promise((resolve, reject) => {
